@@ -1,17 +1,17 @@
-const clock=()=>{
-  const d=new Date();
-  
-  let hour=d.getHours();
-  let min=d.getMinutes();
-  let sec=d.getSeconds();
-  
-  hour=hour<10?"0"+hour:hour;
-  min=min<10?"0"+min:min;
-  sec=sec<10?"0"+sec:sec;
-  
-  let time='${hour}:${min}:${sec}';
-  
-  document.querySelector(".clock-time").innerText=time;
-};
+function showClock(){
+ver time=new Data();
+ver hour=time.getHours();
+ver min=time.getMinutes();
+ver sec=time.getSeconds();
+ver msg=hour+":"+min+":"+sec;
+document.getElementById("RealtimeClockArea").innerHTML=msg;
+}
 
-setInterval(clock,1000}
+function set2fig(num){
+ver ret;
+  if(num<10){ret="0"+num;}
+  else{ret=num;}
+  return ret;
+}
+
+setInterval('showClock()',1000);
