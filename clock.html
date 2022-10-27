@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title> clock </title>
 </head>
-<body>
-
-   <p id="RealtimeClockArea"></p>
+<body onload="strClock();>
+              <div id="pos"></div>
  
-   <script src="clock.js" defer async></script>
+   <script type="text/javascript">
+                                 
+    function getTime(){
+    var d=new Date();
+    var h=('0'+d.getHours()).slice(-2);
+    var m=('0'+d.getMinutes()).slice(-2);
+    var s=('0'+d.getSeconds()).slice(-2);
+    time=h+":"+m+":"+s;
+    var id1=document.getElementById('pos');
+    id1.innerHTML=time;
+                    }
+                    
+  function strClock(){
+    setInterval("getTime();",1000);
+  </script>
+                         
 </body>
 </html>
